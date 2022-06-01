@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* [animation] */
+.header-controller li{
+    @apply relative before:content-[''] before:h-1.5 before:absolute before:left-0 before:top-0 before:rounded-full before:transform before:-translate-y-1/2 before:block before:w-0 before:opacity-0 before:bg-[#FDB851];
+}
+
+.header-controller li.tns-nav-active::before{
+    animation: slide-line 8.8s linear;
+    opacity: 1;
+}
+
+header .tns-inner,
+header .tns-outer{
+    @apply h-full;
+}
+
+
+@keyframes slide-line {
+    100%{
+        width: 100%;
+    }
+}
